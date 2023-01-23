@@ -19,8 +19,8 @@ namespace ApiCollections.Controllers
         {
             CollectionsMongoClasses conectar = new CollectionsMongoClasses();
             MongoClient dbClient = new MongoClient("mongodb://localhost:27017");
-            var dbName = dbClient.GetDatabase("6846433ef36b141080740094ce6e3852");
-            var collist = dbName.GetCollection<BsonDocument>("LogConversation");
+            var dbName = dbClient.GetDatabase("WhateverDaBase");
+            var collist = dbName.GetCollection<BsonDocument>("WhateverColList");
 
             var result = collist.Find(_=>true).FirstOrDefault();
 
